@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width = device-width, initial-scale = 1">
+  <title> RetroLook Fashion </title>
+  <link href="styles/lib/bootstrap.min.css" rel="stylesheet">
+  <link href="styles/lib/bootstrap-material-design.min.css" rel="stylesheet">
+  <link href="styles/lib/ripples.min.css" rel="stylesheet">
+  <link href="styles/lib/snackbar.min.css" rel="stylesheet">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+  <link href="styles/lib/MaterialIcons.css" rel="stylesheet" />
+  <link href="styles/dev/common.css" rel="stylesheet"/>
+  <link href="styles/dev/reusable.css" rel="stylesheet"/>
+  <link rel="icon" href="img/img-8.png"/>
+</head>
+
+<body ng-app="myApp">
+  <retro-header></retro-header>
+  <main>
+    <div ng-view autoscroll="true"></div>
+  </main>
+  <retro-footer></retro-footer>
+  <script src="scripts/lib/jquery.min.js"></script>
+  <script src="scripts/lib/bootstrap.min.js"></script>
+  <script src="scripts/lib/material.min.js"></script>
+  <script src="scripts/lib/ripples.min.js"></script>
+  <script src="scripts/lib/snackbar.min.js"></script>
+  <script src="scripts/lib/angular.min.js"></script>
+  <script src="scripts/lib/angular-route.min.js"></script>
+  <script src="scripts/lib/angular-messages.min.js"></script>
+  <script src="scripts/lib/angular-local-storage.min.js"></script>
+  <script src="scripts/lib/arrive.min.js"></script>
+  <script src="scripts/dev/app.js"></script>
+  <script src="scripts/dev/route.js"></script>
+  <script src="scripts/dev/directive.js"></script>
+  <script>
+    $.material.init();
+    $('[data-toggle="tooltip"]').tooltip();
+  </script>
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script type="text/javascript">
+     (function(){
+        emailjs.init("user_6jbPLD3vrmUihBmS8eGUV");
+     })();
+  </script>
+</body>
+
+</html>

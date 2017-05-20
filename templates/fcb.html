@@ -1,0 +1,6 @@
+<div class="cartBtnFixed">
+  <span class="badge p-cart-badge" ng-hide="getCartLength() === null || getCartLength() === 0" ng-bind="getCartLength()"></span>
+  <button class="btn p-pmbgColor btn-raised btn-fab" ng-disabled="getCartLength() === null || getCartLength() === 0" ng-click="goToCart()">
+    <i class="material-icons r-white">&#xE854;</i>
+  </button>
+</div>

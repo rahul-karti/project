@@ -1,0 +1,38 @@
+<fcb></fcb>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
+      <div class="panel">
+        <div class="panel-body">
+          <h3 class=" p-pmColor text-center">PRODUCTS</h3>
+          <hr>
+          <div class="col-sm-4 col-md-4 text-center" ng-repeat="product in productsDetails">
+            <div class="thumbnail">
+              <a ng-href="#/products/{{product.PID}}" ng-if="$first">
+                <img ng-src="{{product.image}}" alt="{{product.image}}" class="circleborder" />
+              </a>
+              <a ng-href="#/wip" ng-if="!$first">
+                <img ng-src="{{product.image}}" alt="{{product.image}}" class="circleborder" />
+              </a>
+              <div class="caption">
+                <h4 class="p-pmColor">{{product.heading | uppercase}}</h4>
+                <p>{{product.desc | uppercase}}</p>
+                <hr>
+                <div class="row">
+                  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <h3 class="p-pmColor r-margin0"><i class="fa fa-inr p-pmColor" aria-hidden="true"></i> {{product.price}}</h3>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <i class="material-icons p-pmColor r-curPointer" ng-click="addToCart(product)"
+                    data-toggle="tooltip" data-placement="top" title="Add To Cart" data-original-title="Add To Cart"
+                    data-toggle=snackbar data-content="This is my awesome snackbar!">&#xE854;</i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

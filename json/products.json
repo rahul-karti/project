@@ -1,0 +1,49 @@
+[{
+    "PID": 1,
+    "image": "img/img-1.jpg",
+    "heading": "Designer dress for female",
+    "desc": "FLAT 40% OFF",
+    "price": "150",
+    "quantity": 1
+  },
+  {
+    "PID": 2,
+    "image": "img/img-2.jpg",
+    "heading": "Designer dress for male",
+    "desc": "FLAT 30% OFF",
+    "price": "110",
+    "quantity": 1
+  },
+  {
+    "PID": 3,
+    "image": "img/img-3.jpg",
+    "heading": "Designer dress for kids",
+    "desc": "FLAT 50% OFF",
+    "price": "102",
+    "quantity": 1
+  },
+  {
+      "PID": 4,
+      "image": "img/img-10.jpg",
+      "heading": "Designer dress for kids",
+      "desc": "FLAT 40% OFF",
+      "price": "210",
+      "quantity": 1
+    },
+    {
+      "PID": 5,
+      "image": "img/img-11.jpg",
+      "heading": "Designer dress for female",
+      "desc": "FLAT 50% OFF",
+      "price": "120",
+      "quantity": 1
+    },
+    {
+      "PID": 6,
+      "image": "img/img-12.jpg",
+      "heading": "Designer dress for male",
+      "desc": "FLAT 35% OFF",
+      "price": "502",
+      "quantity": 1
+    }
+]

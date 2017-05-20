@@ -1,0 +1,77 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: white;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.navbar.navbar-default {
+  background-color: #96007e !important;
+  color: rgba(255, 255, 255, .84) !important;
+  margin-bottom: 0;
+}
+
+.footer {
+  background-color: rgba(150, 0, 126, 0.73) !important;
+}
+
+.p-pmColor {
+  color: #96007e !important;
+}
+
+.p-pmbgColor {
+  background-color: #96007e !important;
+}
+
+.containers {
+  width: 75%;
+  height: 75%;
+  margin: auto;
+  box-shadow: 0 0 30px black;
+}
+
+.circleborder {
+  margin-top: 5%;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px !important;
+  border: 5px solid #96007e;
+}
+
+.marginRight {
+  margin-right: 10%;
+}
+
+.text {
+  margin-top: 5px;
+  border-top: 5px;
+  margin-bottom: 10px;
+}
+
+.bottom_ul {
+  list-style-type: none;
+  float: right;
+  margin-bottom: 0px;
+}
+
+.cartBtnFixed {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+}
+
+.btn-primary {
+  color: #96007e;
+}
+
+.p-cart-badge {
+  position: absolute !important;
+  z-index: 9 !important;
+  background: red !important;
+  left: 0px !important;
+  top: 0px !important;
+}

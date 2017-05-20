@@ -1,0 +1,52 @@
+<fcb></fcb>
+<div class="container r-marginTB5p">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
+      <div class="panel">
+        <div class="panel-body">
+          <h3 class="text-center p-pmColor">CART</h3>
+          <hr>
+          <h2 class="text-center text-muted text-uppercase r-marginT5p" ng-show="getCartLength()===null || getCartLength()===0">your cart is empty!</h2>
+          <div ng-hide="getCartLength()===null || getCartLength()===0">
+            <div class="table-responsive">
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>ID</th>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Amount</th>
+                    <th>Total</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr ng-repeat="item in cart">
+                    <td>{{$index+1}}</td>
+                    <td>{{item.productID}}</td>
+                    <td>{{item.name}}</td>
+                    <td style="display: flex;align-items: center;">
+                      <i class="material-icons p-pmColor r-curPointer" ng-click="incQty(item.productID, item.quantity)">&#xE147;</i>
+                      {{item.quantity}}
+                      <i class="material-icons p-pmColor r-curPointer" ng-click="decQty(item.productID, item.quantity)">&#xE15C;</i>
+                    </td>
+                    <td><i class="fa fa-inr" aria-hidden="true"></i> {{item.price}}</td>
+                    <td><i class="fa fa-inr" aria-hidden="true"></i> {{item.price * item.quantity}}</td>
+                    <td><i class="material-icons r-curPointer p-pmColor" ng-click="deleteItem(item.productID)">&#xE872;</i></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-right">
+              <h3 class="p-pmColor">Total <i class="fa fa-inr text-right" aria-hidden="true"></i> {{getCartPrice()}}</h3> </div>
+            <div class="text-right">
+              <a type="button" class="btn p-pmColor btn-flat" ng-click="clearCart()" ng-hide="getCartLength()===null || getCartLength()===0">clear cart</a>
+              <button type="button" class="btn btn-raised p-pmbgColor r-white" ng-disabled="getCartLength()===null || getCartLength()===0" ng-click="updateCartPrice()">checkout</button>
+            </div>
+          <div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

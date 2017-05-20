@@ -1,0 +1,46 @@
+<fcb></fcb>
+<div class="container r-marginTB5p">
+  <div class="row">
+    <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-12-offset-6">
+      <div class="panel">
+        <div class="panel-body">
+          <h3 class="text-center p-pmColor">Customer Details</h3>
+          <hr>
+          <form name="customerDetailsForm" ng-submit="cdForm()">
+            <div class="form-group label-floating">
+              <label class="control-label">Your Name</label>
+              <input class="form-control" type="text" name="name" ng-model="customerDetails.name" ng-minlength="3" ng-maxlength="50" required/>
+              <div class="text-danger" ng-messages="customerDetailsForm.name.$error" ng-show="customerDetailsForm.name.$touched">
+                <div ng-messages-include="templates/Messages.html"></div>
+              </div>
+            </div>
+            <div class="form-group label-floating">
+              <label class="control-label">Email</label>
+              <input class="form-control" type="email" name="email" ng-model="customerDetails.email" ng-minlength="5" ng-maxlength="50" required/>
+              <div class="text-danger" ng-messages="customerDetailsForm.email.$error" ng-show="customerDetailsForm.email.$touched">
+                <div ng-messages-include="templates/Messages.html"></div>
+              </div>
+            </div>
+            <div class="form-group label-floating">
+              <label class="control-label">Phone No.</label>
+              <input class="form-control" type="number" name="phone" ng-model="customerDetails.phone" ng-minlength="8" ng-maxlength="13" required/>
+              <div class="text-danger" ng-messages="customerDetailsForm.phone.$error" ng-show="customerDetailsForm.phone.$touched">
+                <div ng-messages-include="templates/Messages.html"></div>
+              </div>
+            </div>
+            <div class="form-group label-floating">
+              <label class="control-label">Address</label>
+              <textarea class="form-control" rows="2" name="address" ng-model="customerDetails.address" ng-minlength="10" ng-maxlength="200"required></textarea>
+              <div class="text-danger" ng-messages="customerDetailsForm.address.$error" ng-show="customerDetailsForm.address.$touched">
+                <div ng-messages-include="templates/Messages.html"></div>
+              </div>
+            </div>
+            <div class="form-group text-right">
+              <button type="submit" class="btn btn-raised p-pmbgColor r-white" ng-disabled="customerDetailsForm.$invalid">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

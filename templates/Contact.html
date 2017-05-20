@@ -1,0 +1,85 @@
+<fcb></fcb>
+<div class="container-fluid r-marginTB5p">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
+      <div class="panel">
+        <div class="panel-body">
+          <h3 class="text-center p-pmColor"> CONTACT US </h3>
+          <hr>
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <form name="contactForm" ng-submit="contactFormSubmit()">
+              <div class="form-group label-floating">
+                <label class="control-label">Your Name</label>
+                <input class="form-control" type="text" name="name" ng-model="contact.name" ng-minlength="3" ng-maxlength="50" required/>
+                <div class="text-danger" ng-messages="contactForm.name.$error" ng-show="contactForm.name.$touched">
+                  <div ng-messages-include="templates/Messages.html"></div>
+                </div>
+              </div>
+              <div class="form-group label-floating">
+                <label class="control-label">Email</label>
+                <input class="form-control" type="email" name="email" ng-model="contact.email" ng-minlength="5" ng-maxlength="50" required/>
+                <div class="text-danger" ng-messages="contactForm.email.$error" ng-show="contactForm.email.$touched">
+                  <div ng-messages-include="templates/Messages.html"></div>
+                </div>
+              </div>
+              <div class="form-group label-floating">
+                <label class="control-label">Phone No.</label>
+                <input class="form-control" type="number" name="phone" ng-model="contact.phone" ng-minlength="8" ng-maxlength="13" required/>
+                <div class="text-danger" ng-messages="contactForm.phone.$error" ng-show="contactForm.phone.$touched">
+                  <div ng-messages-include="templates/Messages.html"></div>
+                </div>
+              </div>
+              <div class="form-group label-floating">
+                <label class="control-label">Address</label>
+                <input class="form-control" type="text" name="address" ng-model="contact.address" ng-minlength="5" ng-maxlength="100" required/>
+                <div class="text-danger" ng-messages="contactForm.address.$error" ng-show="contactForm.address.$touched">
+                  <div ng-messages-include="templates/Messages.html"></div>
+                </div>
+              </div>
+              <div class="form-group label-floating">
+                <label class="control-label">Message</label>
+                <textarea class="form-control" rows="2" name="message" ng-model="contact.message" ng-minlength="10" ng-maxlength="200"required></textarea>
+                <div class="text-danger" ng-messages="contactForm.message.$error" ng-show="contactForm.message.$touched">
+                  <div ng-messages-include="templates/Messages.html"></div>
+                </div>
+              </div>
+              <div class="form-group text-right">
+                <button type="submit" class="btn btn-raised p-pmbgColor r-white" ng-disabled="contactForm.$invalid">Submit</button>
+              </div>
+            </form>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <h3 class="p-pmColor text-center">Address</h3>
+            <br>
+            <p><i class="fa fa-building-o" aria-hidden="true"></i> Retrolook Fashions 8 Ansari Road Daryaganj Delhi-110002</p>
+            <br>
+            <p> <i class="fa fa-phone" aria-hidden="true"></i> (+91)9934643291, (+91)9871749948</p>
+            <br>
+            <p><i class="fa fa-envelope" aria-hidden="true"></i> <a href="https://mail.google.com">retrolook_fashion@gmai.com</a></p>
+            <br>
+            <p class="p-pmColor text-center"> Google Map</p>
+            <div class="r-map" id="map"></div>
+            <script>
+              function initMap() {
+                var uluru = {
+                  lat: 28.645173,
+                  lng: 77.244548
+                };
+                var map = new google.maps.Map(document.getElementById('map'), {
+                  zoom: 12,
+                  center: uluru
+                });
+                var marker = new google.maps.Marker({
+                  position: uluru,
+                  map: map
+                });
+              }
+            </script>
+            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdA0cvyfyLZDag3cyzUXyUyy1uE5Etg8A&callback=initMap">
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

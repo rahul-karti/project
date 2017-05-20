@@ -1,0 +1,50 @@
+.r-marginT10p {
+  margin-top: 10% !important;
+}
+
+.r-marginT5p {
+  margin-top: 5% !important;
+}
+
+.r-marginTB10p {
+  margin-top: 10% !important;
+  margin-bottom: 10% !important;
+}
+
+.r-white {
+  color: #FFFFFF !important;
+}
+
+.r-marginTB5p {
+  margin-top: 5% !important;
+  margin-bottom: 5% !important;
+  align-content: flex-end;
+}
+
+.r-containers {
+  width: 80%;
+  height: 80%;
+  margin-top: 5%;
+}
+
+.r-breadcrumb {
+  padding: 8px 15px;
+  margin-bottom: 20px;
+  list-style: none;
+  background-color: #FFFFFF;
+  border-radius: 4px;
+}
+
+.r-map {
+  width: 100%;
+  height: 400px;
+  background-color: grey;
+}
+
+.r-margin0 {
+  margin: 0 !important;
+}
+
+.r-curPointer {
+  cursor: pointer;
+}

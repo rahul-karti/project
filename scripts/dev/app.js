@@ -138,13 +138,14 @@ app.controller("MyController", ["$scope", "$http", "localStorageService", functi
       "address": $scope.customerDetails.address,
       "email": $scope.customerDetails.email
     }).then(function(response) {
-      $scope.clearCart();
       $.snackbar({
         content: "Your order is placed successfully! The product will be delivered soon...",
         style: "toast",
         timeout: 3000
       });
+      window.location.href = "#/products";
     });
+    $scope.clearCart();
     $scope.customerDetails = {};
     $scope.customerDetailsForm.$setUntouched();
   }
